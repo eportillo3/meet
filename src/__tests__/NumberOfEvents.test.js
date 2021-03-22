@@ -15,7 +15,7 @@ describe("<NumberOfEvents /> component", () => {
   test("check input default value is equal to undefined", () => {
     expect(
       NumberOfEventsWrapper.find(".event-number-input").at(0).props().value
-    ).toEqual(undefined);
+    ).toEqual(5);
   });
 
   test("check placeholder to be Enter number of events", () => {
