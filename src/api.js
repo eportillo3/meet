@@ -61,10 +61,10 @@ export const getEvents = async () => {
   if (token) {
     removeQuery();
     const url =
-      "https://4vpg3w4byk.execute-api.us-east-1.amazonaws.com/dev/api/get-events/{access_token}";
-    // "https://4vpg3w4byk.execute-api.us-east-1.amazonaws.com/dev/api/get-events/{access_token}" +
-    // "/" +
-    // token;
+      // "https://4vpg3w4byk.execute-api.us-east-1.amazonaws.com/dev/api/get-events/{access_token}";
+      "https://4vpg3w4byk.execute-api.us-east-1.amazonaws.com/dev/api/get-events/{access_token}" +
+      "/" +
+      token;
     const result = await axios.get(url);
 
     if (result.data) {
