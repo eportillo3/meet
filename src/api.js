@@ -47,14 +47,21 @@ export const getEvents = async () => {
     return mockData;
   }
 
+  if (!navigator.onLine) {
+    const data = localStorage.getItem("lastEvents");
+    NProgress.done();
+    return data ? JSON.parse(events).events : [];
+  }
+
   const token = await getAccessToken();
 
   if (token) {
     removeQuery();
     const url =
-      "https://4vpg3w4byk.execute-api.us-east-1.amazonaws.com/dev/api/get-events/{access_token}" +
-      "/" +
-      token;
+      "https://4vpg3w4byk.execute-api.us-east-1.amazonaws.com/dev/api/get-events/{access_token}";
+    // "https://4vpg3w4byk.execute-api.us-east-1.amazonaws.com/dev/api/get-events/{access_token}" +
+    // "/" +
+    // token;
     const result = await axios.get(url);
     if (result.data) {
       var locations = extractLocations(result.data.events);
