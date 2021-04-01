@@ -17,6 +17,16 @@ p {
   margin: 5px 0;
 }
 
+.event-number {
+  padding-top: 10px;
+}
+
+.recharts-surface {
+  background-color: #f0efeb;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px -15px;
+}
+
 .display-none {
   display: none;
 }
@@ -80,12 +90,15 @@ input[type="number"] {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  /* border: 1px solid #ccc; */
+  border-radius: 20px;
   position: relative;
+  background-color: #2f4365;
+  box-shadow: 10px 10px 15px -15px #000;
+  color: white;
 }
 
-.details-btn {
+.show-hide-btn {
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -93,6 +106,13 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  margin: 0 10px 10px 0;
+  background-color: #f0efeb;
+  border: none;
+}
+
+.show-hide-btn:hover {
+  background-color: #c9c9c9;
 }
 
 .name {
@@ -189,6 +209,11 @@ input[type="number"] {
   width: 18px;
   height: 18px;
 }
+
+.google-link {
+  color: white;
+}
+
 .btn-text {
   float: right;
   margin: 11px 11px 0 0;
