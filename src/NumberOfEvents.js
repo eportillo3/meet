@@ -3,7 +3,7 @@ import { ErrorAlert } from "./Alert";
 
 class NumberOfEvents extends Component {
   state = {
-    eventCount: 5,
+    eventCount: 1,
   };
 
   handleEventInputChanged = (event) => {
@@ -11,12 +11,12 @@ class NumberOfEvents extends Component {
     if (eventCount < 1) {
       return this.setState({
         eventCount: "",
-        errorText: `Select number between 1 and 5`,
+        errorText: `Select number between 1 and 32`,
       });
-    } else if (eventCount > 5) {
+    } else if (eventCount > 32) {
       return this.setState({
         eventCount: "",
-        errorText: `Select number between 1 and 5`,
+        errorText: `Select number between 1 and 32`,
       });
     } else {
       this.setState({
