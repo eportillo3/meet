@@ -1,4 +1,4 @@
-# meet-app/Code Club
+# meet-app
 
 React app built with CRA PWA boiler-plate generator.
 
